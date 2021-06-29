@@ -1,0 +1,39 @@
+form{
+	background-image: url(logo2.jpg);
+	
+
+	padding-left: 170px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+h2{
+	color: #330000;
+	font-size: 22px;
+	/*text-shadow: 1px 1px #ff0000;*/
+	font-family: 'Archivo Black';
+}
+h1{
+	font-family: "Serif, Times New Roman";
+	color: blac;
+}
+h3{
+	font-family: "Almendra";
+	font-size: 35px;
+	color: #000080;
+}
+
+#age,#chol,#trestbps, #thalach,#oldpeak{
+	width:120px;
+	height: 30px;
+	top:0%;
+	right:0%;
+	z-index:10;
+	background-color:#CCC;
+	border: 2px solid grey;
+	font-size: 20px;
+
+}
+#age input {
+	background-color:#FFF  
+}
