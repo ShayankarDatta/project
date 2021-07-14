@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LINKEDHEART::Take care your sweet heart</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../static/index.css">
 
+	<link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
+</head>
+<body>
+	<div class="container">
+
+
+
+		<div class="dii">
+			<img id="i" src="../static/logo.jpeg"> <span> </span>              <div class="di"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></div>
+</svg><div class="d"><a href="shayankardatta@gmail.com">shayankardatta@gmail.com</a><br><a href="shayankardatta@gmail.com">shayankardatta@gmail.com</a></div>
+		</div>
+
+		<!-- navbar start -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  	<a class="navbar-brand" href="../static/logo.jpeg">LINKEDHEART</a>
+  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+  	<div class="collapse navbar-collapse" id="navbarNav">
+    	<ul class="navbar-nav">
+     	 <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About the website</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Help</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Developers</a>
+      </li>
+    	</ul>
+  	</div>
+	</nav>
+	<!-- navbar end -->
+
+
+
+	<div class="jumbotron">
+	<h3>Welcome to LINKEDHEART!!! We care your heart<br><br>
+	Please fill up the details to know the condition of your heart
+</svg></h3><img id="ii" src="../static/heart.jpg">
+	</div>
+
+	<!-- form start -->
+
+
+	<form action = "{{url_for('predict')}}" method ="POST" >
+	
+		<h2>
+
+		<label for="age">Enter Patient's Age: </label>
+		<input type="number" name="age" id="age" required> years<br><br>
+
+		<label for="sex">Select Patient's sex: </label>
+		<select name="sex" id="sex" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">Female</option>
+			<option value="1">Male</option>
+		</select><br><br>
+
+		<label for="cp">Choose chest pain type: </label>
+		<select name="cp" id="cp" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">Class 1 or Typical Angina</option>
+			<option value="1">Class 2 or Atypical Angina</option>
+			<option value="2">Class 3 or Non-Anginal Pain</option>
+			<option value="3">Class 4 or Asymptomatic</option>
+		</select><br><br>
+
+		<label for="trestbps">Enter Resting Blood Pressure in mmHg: </label>
+		<input type="number" name="trestbps" id="trestbps" required> mmHg<br><br>
+
+		<label for="chol">Enter Cholestoral in mg/dl: </label>
+		<input type="number" name="chol" id="chol" required> mg/dl<br><br>
+
+		<label for="fbs">Select Fasting Blood Sugar: </label>
+		<select name="fbs" id="fbs" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">No sugar or <=120 mg/dl</option>
+			<option value="1">More than 120 mg/dl</option>
+		</select><br><br>
+
+		<label for="restecg">Select Resting Electrocardiographic Results: </label>
+		<select name="restecg" id="restecg" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">Normal</option>
+			<option value="1">Having ST-T</option>
+			<option value="2">Hypertrophy</option>
+		</select><br><br>
+
+		<label for="thalach">Enter the Maximum Heart Rate Achieved: </label>
+		<input type="number" name="thalach" id="thalach" required><br><br>
+
+		<label for="exang">Select Exercise Induced Angina: </label>
+		<select name="exang" id="exang" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</select><br><br>
+
+		<label for="oldpeak">Enter ST depression induced by exercise relative to rest: </label>
+		<input type="float" name="oldpeak" id="oldpeak" required><br><br>
+
+		<label for="slope">Enter the Slope of the peak exercise ST segment: </label>
+		<select name="slope" name="slope" id="slope" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">Upsloping</option>
+			<option value="1">Flat</option>
+			<option value="2">Downsloping</option>
+		</select><br><br>
+
+		<label for="ca">Select the Number of Major Vessels(0-3): </label>
+		<select name="ca" id="ca" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select><br><br>
+
+		<label for="thal">Select Thalasemia Rate: </label>
+		<select name="thal" id="thal" required>
+			<option value=""> -- Select an Option -- </option>
+			<option value="1">Normal</option>
+			<option value="2">Fixed Defect</option>
+			<option value="3">Reversable Defect</option>
+		</select><br><br>
+		</h2>
+
+
+		<center><button id="but" class="btn btn-success btn-lg" value="predict">Predict! </button> </center>
+
+
+		<div id ="result">
+							<strong style="color:red">{{result}}</strong>
+					 </div>
+	
+	</form>
+</div>
+
+
+</body>
+</html>
